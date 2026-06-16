@@ -6,5 +6,7 @@ namespace MusicAggregator.Application.Models
         public bool Track { get; init; }
         public bool Artist { get; init; }
         public bool Lyrics { get; init; }
+
+        public IReadOnlyList<string> Warnings { get; init; } = [];
     }
 }

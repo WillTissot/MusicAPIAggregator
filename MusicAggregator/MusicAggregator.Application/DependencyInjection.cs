@@ -7,7 +7,7 @@ namespace MusicAggregator.Application
     {
         public static IServiceCollection AddApplication(this IServiceCollection services)
         {
-            services.AddTransient<IGetSongFullInfo, GetSongFullInfo>();
+            services.AddTransient<IMusicAggregatorService, MusicAggregatorService>();
             return services;
         }
     }

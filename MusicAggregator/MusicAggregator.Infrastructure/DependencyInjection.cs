@@ -31,21 +31,21 @@ namespace MusicAggregator.Infrastructure
             {
                 var o = sp.GetRequiredService<IOptions<DeezerOptions>>().Value;
                 http.BaseAddress = new Uri(o.BaseUrl);
-                http.Timeout = TimeSpan.FromSeconds(o.TimeoutSeconds);
+                http.Timeout = Timeout.InfiniteTimeSpan;
             }).AddResilience();
 
             services.AddHttpClient<IArtistProvider, BrainzClient>((sp, http) =>
             {
                 var o = sp.GetRequiredService<IOptions<BrainzOptions>>().Value;
                 http.BaseAddress = new Uri(o.BaseUrl);
-                http.Timeout = TimeSpan.FromSeconds(o.TimeoutSeconds);
+                http.Timeout = Timeout.InfiniteTimeSpan;
             }).AddResilience();
 
             services.AddHttpClient<ILyricsProvider, LrclibClient>((sp, http) =>
             {
                 var o = sp.GetRequiredService<IOptions<LrclibOptions>>().Value;
                 http.BaseAddress = new Uri(o.BaseUrl);
-                http.Timeout = TimeSpan.FromSeconds(o.TimeoutSeconds);
+                http.Timeout = Timeout.InfiniteTimeSpan;
             }).AddResilience();
 
             return services;
