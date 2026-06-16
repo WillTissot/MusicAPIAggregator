@@ -1,0 +1,1042 @@
+﻿{
+  "created": "2026-06-16T10:40:16.721Z",
+  "count": 29,
+  "offset": 0,
+  "artists": [
+    {
+      "id": "a74b1b7f-71a5-4011-9441-d0b5e4122711",
+      "type": "Group",
+      "type-id": "e431f5f6-b5d2-343d-8b36-72607fffb74b",
+      "score": 100,
+      "name": "Radiohead",
+      "sort-name": "Radiohead",
+      "country": "GB",
+      "area": {
+        "id": "8a754a16-0027-3a29-b6d7-2b40ea0481ed",
+        "type": "Country",
+        "type-id": "06dd0ae4-8c74-30bb-b43d-95dcedf961de",
+        "name": "United Kingdom",
+        "sort-name": "United Kingdom",
+        "life-span": {
+          "ended": null
+        }
+      },
+      "begin-area": {
+        "id": "d840d4b3-8987-4626-928b-398de760cc24",
+        "type": "City",
+        "type-id": "6fd8f29a-3d0a-32fc-980d-ea697b69da78",
+        "name": "Abingdon-on-Thames",
+        "sort-name": "Abingdon-on-Thames",
+        "life-span": {
+          "ended": null
+        }
+      },
+      "isnis": [
+        "0000000115475162"
+      ],
+      "life-span": {
+        "begin": "1991",
+        "ended": null
+      },
+      "aliases": [
+        {
+          "sort-name": "r/head",
+          "type-id": "1937e404-b981-3cb7-8151-4c86ebfc8d8e",
+          "name": "r/head",
+          "locale": null,
+          "type": "Search hint",
+          "primary": null,
+          "begin-date": null,
+          "end-date": null
+        },
+        {
+          "sort-name": "电台司令",
+          "type-id": "894afba6-2816-3c24-8072-eadb66bd04bc",
+          "name": "电台司令",
+          "locale": "zh",
+          "type": "Artist name",
+          "primary": true,
+          "begin-date": null,
+          "end-date": null
+        },
+        {
+          "sort-name": "れでぃおへっど",
+          "type-id": "894afba6-2816-3c24-8072-eadb66bd04bc",
+          "name": "レディオヘッド",
+          "locale": "ja",
+          "type": "Artist name",
+          "primary": true,
+          "begin-date": null,
+          "end-date": null
+        },
+        {
+          "sort-name": "Radiohead & Thom Yorke",
+          "type-id": "1937e404-b981-3cb7-8151-4c86ebfc8d8e",
+          "name": "Radiohead & Thom Yorke",
+          "locale": null,
+          "type": "Search hint",
+          "primary": null,
+          "begin-date": null,
+          "end-date": null
+        },
+        {
+          "sort-name": "Radio Head",
+          "type-id": "1937e404-b981-3cb7-8151-4c86ebfc8d8e",
+          "name": "Radio Head",
+          "locale": null,
+          "type": "Search hint",
+          "primary": null,
+          "begin-date": null,
+          "end-date": null
+        }
+      ],
+      "tags": [
+        {
+          "count": 17,
+          "name": "rock"
+        },
+        {
+          "count": 13,
+          "name": "electronic"
+        },
+        {
+          "count": 0,
+          "name": "post-rock"
+        },
+        {
+          "count": 42,
+          "name": "alternative rock"
+        },
+        {
+          "count": 2,
+          "name": "experimental"
+        },
+        {
+          "count": 14,
+          "name": "british"
+        },
+        {
+          "count": 0,
+          "name": "grunge"
+        },
+        {
+          "count": 1,
+          "name": "idm"
+        },
+        {
+          "count": 1,
+          "name": "uk"
+        },
+        {
+          "count": 0,
+          "name": "britannique"
+        },
+        {
+          "count": 4,
+          "name": "indie rock"
+        },
+        {
+          "count": 2,
+          "name": "electronica"
+        },
+        {
+          "count": 2,
+          "name": "alternative"
+        },
+        {
+          "count": 1,
+          "name": "britpop"
+        },
+        {
+          "count": 29,
+          "name": "art rock"
+        },
+        {
+          "count": 1,
+          "name": "post-grunge"
+        },
+        {
+          "count": 14,
+          "name": "experimental rock"
+        },
+        {
+          "count": 1,
+          "name": "english"
+        },
+        {
+          "count": 1,
+          "name": "chamber pop"
+        },
+        {
+          "count": 0,
+          "name": "parlophone"
+        },
+        {
+          "count": -1,
+          "name": "england"
+        },
+        {
+          "count": 1,
+          "name": "indietronica"
+        },
+        {
+          "count": 0,
+          "name": "melancholic"
+        },
+        {
+          "count": 1,
+          "name": "oxford"
+        },
+        {
+          "count": 1,
+          "name": "crossover prog"
+        },
+        {
+          "count": 0,
+          "name": "bootleg"
+        },
+        {
+          "count": 0,
+          "name": "rock and indie"
+        },
+        {
+          "count": 1,
+          "name": "britrock"
+        },
+        {
+          "count": 1,
+          "name": "electronic rock"
+        },
+        {
+          "count": 1,
+          "name": "ambient pop"
+        },
+        {
+          "count": -1,
+          "name": "c’était mieux avant"
+        },
+        {
+          "count": 3,
+          "name": "art pop"
+        },
+        {
+          "count": 0,
+          "name": "nude"
+        },
+        {
+          "count": 0,
+          "name": "trap edm"
+        },
+        {
+          "count": -1,
+          "name": "sacred cows"
+        },
+        {
+          "count": 2,
+          "name": "alternative rock music"
+        },
+        {
+          "count": 0,
+          "name": "lolicore"
+        },
+        {
+          "count": 2,
+          "name": "post-britpop"
+        },
+        {
+          "count": 2,
+          "name": "progressive rock music"
+        },
+        {
+          "count": -1,
+          "name": "1992-1998"
+        },
+        {
+          "count": 0,
+          "name": "new grave"
+        },
+        {
+          "count": 1,
+          "name": "vyrzukhisuc-artiest"
+        }
+      ]
+    },
+    {
+      "id": "c74f4726-2671-4011-81b6-f70da905c05a",
+      "type": "Group",
+      "type-id": "e431f5f6-b5d2-343d-8b36-72607fffb74b",
+      "score": 64,
+      "name": "On a Friday",
+      "sort-name": "On a Friday",
+      "area": {
+        "id": "d840d4b3-8987-4626-928b-398de760cc24",
+        "type": "City",
+        "type-id": "6fd8f29a-3d0a-32fc-980d-ea697b69da78",
+        "name": "Abingdon-on-Thames",
+        "sort-name": "Abingdon-on-Thames",
+        "life-span": {
+          "ended": null
+        }
+      },
+      "begin-area": {
+        "id": "d840d4b3-8987-4626-928b-398de760cc24",
+        "type": "City",
+        "type-id": "6fd8f29a-3d0a-32fc-980d-ea697b69da78",
+        "name": "Abingdon-on-Thames",
+        "sort-name": "Abingdon-on-Thames",
+        "life-span": {
+          "ended": null
+        }
+      },
+      "disambiguation": "pre‐Radiohead group, until 1991",
+      "life-span": {
+        "begin": "1985",
+        "end": "1991",
+        "ended": true
+      },
+      "aliases": [
+        {
+          "sort-name": "Radiohead",
+          "type-id": "1937e404-b981-3cb7-8151-4c86ebfc8d8e",
+          "name": "Radiohead",
+          "locale": null,
+          "type": "Search hint",
+          "primary": null,
+          "begin-date": null,
+          "end-date": null
+        },
+        {
+          "sort-name": "Shindig",
+          "name": "Shindig",
+          "locale": null,
+          "type": null,
+          "primary": null,
+          "begin-date": null,
+          "end-date": null
+        }
+      ],
+      "tags": [
+        {
+          "count": 1,
+          "name": "indie pop"
+        },
+        {
+          "count": 1,
+          "name": "uk"
+        },
+        {
+          "count": 1,
+          "name": "oxford"
+        },
+        {
+          "count": 1,
+          "name": "united kingdom"
+        },
+        {
+          "count": 0,
+          "name": "successor"
+        }
+      ]
+    },
+    {
+      "id": "3ecaa799-94ae-45cd-9ad1-bcabae4073e1",
+      "score": 63,
+      "name": "radiohead 3",
+      "sort-name": "radiohead 3",
+      "disambiguation": "Capsmusic LTD. artist",
+      "life-span": {
+        "ended": null
+      }
+    },
+    {
+      "id": "118b7a68-9249-4f5a-91f4-1fd046c07f8f",
+      "score": 62,
+      "name": "DJ Radiohead",
+      "sort-name": "Radiohead, DJ",
+      "life-span": {
+        "ended": null
+      }
+    },
+    {
+      "id": "33bfaa56-037f-4f7d-9a0a-c2412c636e56",
+      "score": 62,
+      "name": "Radiohead 2",
+      "sort-name": "Radiohead 2",
+      "life-span": {
+        "ended": null
+      }
+    },
+    {
+      "id": "b21ab3cc-88ed-4d2b-bd01-6edb83c37900",
+      "type": "Group",
+      "type-id": "e431f5f6-b5d2-343d-8b36-72607fffb74b",
+      "score": 56,
+      "name": "Fake Plastic Radiohead",
+      "sort-name": "Fake Plastic Radiohead",
+      "begin-area": {
+        "id": "806b9b3b-5daf-4eaa-807d-7a2a29cde0da",
+        "type": "City",
+        "type-id": "6fd8f29a-3d0a-32fc-980d-ea697b69da78",
+        "name": "Leicester",
+        "sort-name": "Leicester",
+        "life-span": {
+          "ended": null
+        }
+      },
+      "life-span": {
+        "begin": "2021-09-25",
+        "ended": null
+      }
+    },
+    {
+      "id": "e48fc8b3-e8ab-4dd4-9dc8-6b0f06ef07d6",
+      "score": 56,
+      "name": "Radiohead Cover Brasil",
+      "sort-name": "Radiohead Cover Brasil",
+      "area": {
+        "id": "33e0f86c-d709-448d-a484-d55778913af1",
+        "type": "City",
+        "type-id": "6fd8f29a-3d0a-32fc-980d-ea697b69da78",
+        "name": "São Paulo",
+        "sort-name": "São Paulo",
+        "life-span": {
+          "ended": null
+        }
+      },
+      "life-span": {
+        "ended": null
+      }
+    },
+    {
+      "id": "1545e981-65ca-4123-9223-ae8efd72cf54",
+      "type": "Group",
+      "type-id": "e431f5f6-b5d2-343d-8b36-72607fffb74b",
+      "score": 52,
+      "name": "An Evening of Radiohead",
+      "sort-name": "Evening of Radiohead, An",
+      "area": {
+        "id": "6658f787-692d-417f-852c-dcca728d5849",
+        "type": "City",
+        "type-id": "6fd8f29a-3d0a-32fc-980d-ea697b69da78",
+        "name": "Edinburgh",
+        "sort-name": "Edinburgh",
+        "life-span": {
+          "ended": null
+        }
+      },
+      "disambiguation": "Radiohead cover band",
+      "life-span": {
+        "begin": "2024-01-01",
+        "ended": null
+      }
+    },
+    {
+      "id": "9055fca5-69bc-4d47-b569-ab2012a19565",
+      "type": "Group",
+      "type-id": "e431f5f6-b5d2-343d-8b36-72607fffb74b",
+      "score": 48,
+      "name": "The Smile",
+      "sort-name": "Smile, The",
+      "area": {
+        "id": "9d5dd675-3cf4-4296-9e39-67865ebee758",
+        "type": "Subdivision",
+        "type-id": "fd3d44c5-80a1-3842-9745-2c4972d35afa",
+        "name": "England",
+        "sort-name": "England",
+        "life-span": {
+          "ended": null
+        }
+      },
+      "disambiguation": "side group of Radiohead",
+      "isnis": [
+        "0000000504086558"
+      ],
+      "life-span": {
+        "begin": "2021-05-22",
+        "ended": null
+      },
+      "tags": [
+        {
+          "count": 1,
+          "name": "electronic"
+        },
+        {
+          "count": 1,
+          "name": "post-rock"
+        },
+        {
+          "count": 2,
+          "name": "alternative rock"
+        },
+        {
+          "count": 2,
+          "name": "post-punk"
+        },
+        {
+          "count": 0,
+          "name": "indie rock"
+        },
+        {
+          "count": 4,
+          "name": "art rock"
+        },
+        {
+          "count": 0,
+          "name": "psychedelic folk"
+        },
+        {
+          "count": 1,
+          "name": "english"
+        }
+      ]
+    },
+    {
+      "id": "4ab74d13-d1eb-4895-b874-6da5d8b1aac3",
+      "type": "Person",
+      "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+      "score": 45,
+      "gender-id": "36d3d30a-839d-3eda-8cb3-29be4384e4a9",
+      "name": "Philip Selway",
+      "sort-name": "Selway, Philip",
+      "gender": "male",
+      "country": "GB",
+      "area": {
+        "id": "8a754a16-0027-3a29-b6d7-2b40ea0481ed",
+        "type": "Country",
+        "type-id": "06dd0ae4-8c74-30bb-b43d-95dcedf961de",
+        "name": "United Kingdom",
+        "sort-name": "United Kingdom",
+        "life-span": {
+          "ended": null
+        }
+      },
+      "begin-area": {
+        "id": "d840d4b3-8987-4626-928b-398de760cc24",
+        "type": "City",
+        "type-id": "6fd8f29a-3d0a-32fc-980d-ea697b69da78",
+        "name": "Abingdon-on-Thames",
+        "sort-name": "Abingdon-on-Thames",
+        "life-span": {
+          "ended": null
+        }
+      },
+      "disambiguation": "drummer in Radiohead",
+      "ipis": [
+        "00178209648"
+      ],
+      "isnis": [
+        "0000000078412006"
+      ],
+      "life-span": {
+        "begin": "1967-05-23",
+        "ended": null
+      },
+      "aliases": [
+        {
+          "sort-name": "Selway",
+          "name": "Selway",
+          "locale": "en",
+          "type": null,
+          "primary": null,
+          "begin-date": null,
+          "end-date": null
+        },
+        {
+          "sort-name": "Selway, Philip James",
+          "type-id": "d4dcd0c0-b341-3612-a332-c0ce797b25cf",
+          "name": "Philip James Selway",
+          "locale": null,
+          "type": "Legal name",
+          "primary": null,
+          "begin-date": null,
+          "end-date": null
+        },
+        {
+          "sort-name": "Philip Selway",
+          "name": "Philip Selway",
+          "locale": null,
+          "type": null,
+          "primary": null,
+          "begin-date": null,
+          "end-date": null
+        },
+        {
+          "sort-name": "Selway, Phil",
+          "name": "Phil Selway",
+          "locale": null,
+          "type": null,
+          "primary": null,
+          "begin-date": null,
+          "end-date": null
+        }
+      ],
+      "tags": [
+        {
+          "count": 1,
+          "name": "rock"
+        },
+        {
+          "count": 1,
+          "name": "post-rock"
+        },
+        {
+          "count": 0,
+          "name": "alternative rock"
+        },
+        {
+          "count": 1,
+          "name": "british"
+        },
+        {
+          "count": 1,
+          "name": "singer-songwriter"
+        },
+        {
+          "count": 1,
+          "name": "uk"
+        },
+        {
+          "count": 0,
+          "name": "indie rock"
+        },
+        {
+          "count": 0,
+          "name": "indie folk"
+        },
+        {
+          "count": 1,
+          "name": "contemporary folk"
+        },
+        {
+          "count": 1,
+          "name": "english"
+        },
+        {
+          "count": 1,
+          "name": "art pop"
+        }
+      ]
+    },
+    {
+      "id": "827df643-4099-40e3-9ba1-8aebbf351cc1",
+      "type": "Person",
+      "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+      "score": 42,
+      "name": "Plank",
+      "sort-name": "Plank",
+      "disambiguation": "Radiohead’s technician",
+      "life-span": {
+        "ended": null
+      }
+    },
+    {
+      "id": "eb2bf67f-5b28-4c2b-afd7-e6c5576aac9a",
+      "type": "Group",
+      "type-id": "e431f5f6-b5d2-343d-8b36-72607fffb74b",
+      "score": 42,
+      "name": "RadiOK",
+      "sort-name": "RadiOK",
+      "disambiguation": "Radiohead Tribute",
+      "life-span": {
+        "begin": "2019",
+        "ended": null
+      }
+    },
+    {
+      "id": "309d9809-cf74-493a-b56b-1378258f20fd",
+      "type": "Person",
+      "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+      "score": 40,
+      "gender-id": "36d3d30a-839d-3eda-8cb3-29be4384e4a9",
+      "name": "Ed O’Brien",
+      "sort-name": "O’Brien, Ed",
+      "gender": "male",
+      "country": "GB",
+      "area": {
+        "id": "8a754a16-0027-3a29-b6d7-2b40ea0481ed",
+        "type": "Country",
+        "type-id": "06dd0ae4-8c74-30bb-b43d-95dcedf961de",
+        "name": "United Kingdom",
+        "sort-name": "United Kingdom",
+        "life-span": {
+          "ended": null
+        }
+      },
+      "begin-area": {
+        "id": "33587495-c775-4483-b819-931c4cf438cd",
+        "type": "City",
+        "type-id": "6fd8f29a-3d0a-32fc-980d-ea697b69da78",
+        "name": "Oxford",
+        "sort-name": "Oxford",
+        "life-span": {
+          "ended": null
+        }
+      },
+      "disambiguation": "guitarist & songwriter in Radiohead",
+      "ipis": [
+        "00178208847"
+      ],
+      "isnis": [
+        "000000007841284X"
+      ],
+      "life-span": {
+        "begin": "1968-04-15",
+        "ended": null
+      },
+      "aliases": [
+        {
+          "sort-name": "O’Brien",
+          "name": "O’Brien",
+          "locale": "en",
+          "type": null,
+          "primary": null,
+          "begin-date": null,
+          "end-date": null
+        },
+        {
+          "sort-name": "EOB",
+          "name": "EOB",
+          "locale": null,
+          "type": null,
+          "primary": null,
+          "begin-date": null,
+          "end-date": null
+        },
+        {
+          "sort-name": "O’Brien, Edward John",
+          "type-id": "d4dcd0c0-b341-3612-a332-c0ce797b25cf",
+          "name": "Edward John O’Brien",
+          "locale": null,
+          "type": "Legal name",
+          "primary": null,
+          "begin-date": null,
+          "end-date": null
+        }
+      ],
+      "tags": [
+        {
+          "count": 1,
+          "name": "rock"
+        },
+        {
+          "count": 1,
+          "name": "electronic"
+        },
+        {
+          "count": 2,
+          "name": "alternative rock"
+        },
+        {
+          "count": 1,
+          "name": "british"
+        },
+        {
+          "count": 1,
+          "name": "uk"
+        },
+        {
+          "count": 1,
+          "name": "indie rock"
+        },
+        {
+          "count": 1,
+          "name": "experimental rock"
+        },
+        {
+          "count": 1,
+          "name": "english"
+        }
+      ]
+    },
+    {
+      "id": "3093e58d-57ce-4757-9919-bfa603ab9a64",
+      "score": 40,
+      "name": "Paranoid",
+      "sort-name": "Paranoid",
+      "disambiguation": "Radiohead tribute band",
+      "life-span": {
+        "ended": null
+      }
+    },
+    {
+      "id": "eef663a4-72f1-4773-9a8d-f9254e555847",
+      "type": "Group",
+      "type-id": "e431f5f6-b5d2-343d-8b36-72607fffb74b",
+      "score": 40,
+      "name": "Karma Police",
+      "sort-name": "Karma Police",
+      "area": {
+        "id": "462e7952-4fa9-43cd-bc24-2c5c9cd5dd47",
+        "type": "City",
+        "type-id": "6fd8f29a-3d0a-32fc-980d-ea697b69da78",
+        "name": "Dublin",
+        "sort-name": "Dublin",
+        "life-span": {
+          "ended": null
+        }
+      },
+      "disambiguation": "Irish Radiohead tribute",
+      "life-span": {
+        "ended": null
+      }
+    },
+    {
+      "id": "7a75f877-3cd7-432c-8349-b09e6a59f975",
+      "type": "Group",
+      "type-id": "e431f5f6-b5d2-343d-8b36-72607fffb74b",
+      "score": 40,
+      "name": "Android paranoid",
+      "sort-name": "Android paranoid",
+      "area": {
+        "id": "29a709d8-0320-493e-8d0c-f2c386662b7f",
+        "type": "City",
+        "type-id": "6fd8f29a-3d0a-32fc-980d-ea697b69da78",
+        "name": "Chicago",
+        "sort-name": "Chicago",
+        "life-span": {
+          "ended": null
+        }
+      },
+      "disambiguation": "Radiohead Tribute (Chicago)",
+      "life-span": {
+        "ended": null
+      }
+    },
+    {
+      "id": "a6606aaa-6027-4d6d-8bea-0e8ee816b8f1",
+      "score": 39,
+      "name": "In Rainbows",
+      "sort-name": "In Rainbows",
+      "disambiguation": "reggaeton remixes of Radiohead",
+      "life-span": {
+        "ended": null
+      }
+    },
+    {
+      "id": "f23074f4-2c06-477a-bf1d-12fa66e087ee",
+      "type": "Person",
+      "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+      "score": 38,
+      "gender-id": "36d3d30a-839d-3eda-8cb3-29be4384e4a9",
+      "name": "Colin Greenwood",
+      "sort-name": "Greenwood, Colin",
+      "gender": "male",
+      "country": "GB",
+      "area": {
+        "id": "8a754a16-0027-3a29-b6d7-2b40ea0481ed",
+        "type": "Country",
+        "type-id": "06dd0ae4-8c74-30bb-b43d-95dcedf961de",
+        "name": "United Kingdom",
+        "sort-name": "United Kingdom",
+        "life-span": {
+          "ended": null
+        }
+      },
+      "begin-area": {
+        "id": "33587495-c775-4483-b819-931c4cf438cd",
+        "type": "City",
+        "type-id": "6fd8f29a-3d0a-32fc-980d-ea697b69da78",
+        "name": "Oxford",
+        "sort-name": "Oxford",
+        "life-span": {
+          "ended": null
+        }
+      },
+      "disambiguation": "English bassist in Radiohead",
+      "ipis": [
+        "00178205758"
+      ],
+      "isnis": [
+        "0000000131483760"
+      ],
+      "life-span": {
+        "begin": "1969-06-26",
+        "ended": null
+      },
+      "aliases": [
+        {
+          "sort-name": "Greenwood",
+          "name": "Greenwood",
+          "locale": "en",
+          "type": null,
+          "primary": null,
+          "begin-date": null,
+          "end-date": null
+        },
+        {
+          "sort-name": "Greenwood, Colin Charles",
+          "type-id": "d4dcd0c0-b341-3612-a332-c0ce797b25cf",
+          "name": "Colin Charles Greenwood",
+          "locale": null,
+          "type": "Legal name",
+          "primary": null,
+          "begin-date": null,
+          "end-date": null
+        }
+      ],
+      "tags": [
+        {
+          "count": 1,
+          "name": "rock"
+        },
+        {
+          "count": 1,
+          "name": "british"
+        },
+        {
+          "count": 1,
+          "name": "uk"
+        },
+        {
+          "count": 1,
+          "name": "english"
+        }
+      ]
+    },
+    {
+      "id": "7615d0d9-9640-4749-a7f9-5e7c162ab5fa",
+      "type": "Group",
+      "type-id": "e431f5f6-b5d2-343d-8b36-72607fffb74b",
+      "score": 38,
+      "name": "Amnesiac Quartet",
+      "sort-name": "Amnesiac Quartet",
+      "country": "FR",
+      "area": {
+        "id": "08310658-51eb-3801-80de-5a0739207115",
+        "type": "Country",
+        "type-id": "06dd0ae4-8c74-30bb-b43d-95dcedf961de",
+        "name": "France",
+        "sort-name": "France",
+        "life-span": {
+          "ended": null
+        }
+      },
+      "disambiguation": "Radiohead tribute jazz band",
+      "life-span": {
+        "ended": null
+      }
+    },
+    {
+      "id": "93ccea0f-cc7e-4057-91b1-b5b8ae6f9a91",
+      "score": 38,
+      "name": "Gazz",
+      "sort-name": "Gazz",
+      "disambiguation": "covered ‘Creep’ of Radiohead",
+      "life-span": {
+        "ended": null
+      }
+    },
+    {
+      "id": "042914f7-8bfa-4b0d-9fa6-ee1b8feacbd5",
+      "type": "Group",
+      "type-id": "e431f5f6-b5d2-343d-8b36-72607fffb74b",
+      "score": 38,
+      "name": "Amnesiac",
+      "sort-name": "Amnesiac",
+      "area": {
+        "id": "77ec97c2-5377-4ac7-b156-620470e71940",
+        "type": "City",
+        "type-id": "6fd8f29a-3d0a-32fc-980d-ea697b69da78",
+        "name": "Santiago",
+        "sort-name": "Santiago",
+        "life-span": {
+          "ended": null
+        }
+      },
+      "begin-area": {
+        "id": "77ec97c2-5377-4ac7-b156-620470e71940",
+        "type": "City",
+        "type-id": "6fd8f29a-3d0a-32fc-980d-ea697b69da78",
+        "name": "Santiago",
+        "sort-name": "Santiago",
+        "life-span": {
+          "ended": null
+        }
+      },
+      "disambiguation": "Chilean Radiohead tribute band",
+      "life-span": {
+        "begin": "2006-01-01",
+        "ended": null
+      }
+    },
+    {
+      "id": "2fe2bb15-8b74-4b5b-abb3-167d8c11954f",
+      "type": "Group",
+      "type-id": "e431f5f6-b5d2-343d-8b36-72607fffb74b",
+      "score": 38,
+      "name": "Amnesiac",
+      "sort-name": "Amnesiac",
+      "country": "AR",
+      "area": {
+        "id": "0df04709-c7d8-3b55-a6ea-f3e5069a947b",
+        "type": "Country",
+        "type-id": "06dd0ae4-8c74-30bb-b43d-95dcedf961de",
+        "name": "Argentina",
+        "sort-name": "Argentina",
+        "life-span": {
+          "ended": null
+        }
+      },
+      "begin-area": {
+        "id": "2bd8607d-56fe-4fa1-96e3-3badd6a98588",
+        "type": "City",
+        "type-id": "6fd8f29a-3d0a-32fc-980d-ea697b69da78",
+        "name": "Buenos Aires",
+        "sort-name": "Buenos Aires",
+        "life-span": {
+          "ended": null
+        }
+      },
+      "disambiguation": "Argentine Radiohead tribute band",
+      "life-span": {
+        "ended": null
+      }
+    },
+    {
+      "id": "b5ed1065-9be0-4214-af07-66d532e64fd2",
+      "type": "Group",
+      "type-id": "e431f5f6-b5d2-343d-8b36-72607fffb74b",
+      "score": 38,
+      "name": "The Bends",
+      "sort-name": "The Bends",
+      "country": "US",
+      "area": {
+        "id": "489ce91b-6658-3307-9877-795b68554c98",
+        "type": "Country",
+        "type-id": "06dd0ae4-8c74-30bb-b43d-95dcedf961de",
+        "name": "United States",
+        "sort-name": "United States",
+        "life-span": {
+          "ended": null
+        }
+      },
+      "disambiguation": "Radiohead cover band, US",
+      "life-span": {
+        "ended": null
+      }
+    },
+    {
+      "id": "7acdf668-b20f-4f98-b740-584b6b24a10e",
+      "type": "Group",
+      "type-id": "e431f5f6-b5d2-343d-8b36-72607fffb74b",
+      "score": 38,
+      "name": "Goyimbwoods",
+      "sort-name": "Goyimbwoods",
+      "disambiguation": "Peruvian Radiohead tribute band",
+      "life-span": {
+        "begin": "2018",
+        "ended": null
+      }
+    },
+    {
+      "id": "b7ab4150-9830-4951-87ed-250ab2cea021",
+      "score": 37,
+      "name": "Secret Society",
+      "sort-name": "Secret Society",
+      "disambiguation": "has covered Radiohead’s Planet Telex",
+      "life-span": {
+        "ended": null
+      }
+    }
+  ]
+}
