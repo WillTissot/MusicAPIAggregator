@@ -1,6 +1,6 @@
 <Solution>
+  <Project Path="MusicAggregator.Api/MusicAggregator.Api.csproj" />
   <Project Path="MusicAggregator.Application/MusicAggregator.Application.csproj" />
   <Project Path="MusicAggregator.Infrastructure/MusicAggregator.Infrastructure.csproj" />
   <Project Path="MusicAggregator.Tests/MusicAggregator.Tests.csproj" />
-  <Project Path="MusicAPIAggregator/MusicAggregator.Api.csproj" />
 </Solution>
