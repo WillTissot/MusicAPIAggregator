@@ -32,23 +32,39 @@ namespace MusicAggregator.Infrastructure
                 var o = sp.GetRequiredService<IOptions<DeezerOptions>>().Value;
                 http.BaseAddress = new Uri(o.BaseUrl);
                 http.Timeout = TimeSpan.FromSeconds(o.TimeoutSeconds);
-            });
+            }).AddResilience();
 
             services.AddHttpClient<IArtistProvider, BrainzClient>((sp, http) =>
             {
                 var o = sp.GetRequiredService<IOptions<BrainzOptions>>().Value;
                 http.BaseAddress = new Uri(o.BaseUrl);
                 http.Timeout = TimeSpan.FromSeconds(o.TimeoutSeconds);
-            });
+            }).AddResilience();
 
             services.AddHttpClient<ILyricsProvider, LrclibClient>((sp, http) =>
             {
                 var o = sp.GetRequiredService<IOptions<LrclibOptions>>().Value;
                 http.BaseAddress = new Uri(o.BaseUrl);
                 http.Timeout = TimeSpan.FromSeconds(o.TimeoutSeconds);
-            });
+            }).AddResilience();
 
             return services;
+        }
+
+        private static IHttpClientBuilder AddResilience(this IHttpClientBuilder builder)
+        {
+            builder.AddStandardResilienceHandler(r => {
+                r.Retry.MaxRetryAttempts = 3;
+                r.Retry.BackoffType = Polly.DelayBackoffType.Exponential;
+                r.Retry.UseJitter = true;
+                r.Retry.Delay = TimeSpan.FromSeconds(1);
+
+                r.AttemptTimeout.Timeout = TimeSpan.FromSeconds(5);
+
+                r.TotalRequestTimeout.Timeout = TimeSpan.FromSeconds(20);
+            });
+
+            return builder;
         }
     }
 }

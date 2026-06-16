@@ -1,4 +1,5 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
+using MusicAggregator.Application.Songs;
 
 namespace MusicAggregator.Application
 {
@@ -6,7 +7,7 @@ namespace MusicAggregator.Application
     {
         public static IServiceCollection AddApplication(this IServiceCollection services)
         {
-            //add aggregator service.
+            services.AddTransient<IGetSongFullInfo, GetSongFullInfo>();
             return services;
         }
     }
