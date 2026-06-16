@@ -12,6 +12,8 @@ namespace MusicAggregator.Infrastructure
     {
         public static IServiceCollection AddInfrastructure(this IServiceCollection services, IConfiguration config)
         {
+            services.AddHybridCache();
+
             services.AddOptions<DeezerOptions>()
                 .Bind(config.GetSection(DeezerOptions.SectionName))
                 .ValidateDataAnnotations()
