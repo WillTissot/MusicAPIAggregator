@@ -15,7 +15,7 @@ namespace MusicAggregator.Api.Controllers
             _aggregatorService = aggregatorService;
         }
 
-        [HttpGet]
+        [HttpGet("song")]
         [ProducesResponseType(typeof(SongPage), StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
@@ -28,6 +28,20 @@ namespace MusicAggregator.Api.Controllers
 
             if (result.Track is null && result.Artist is null && result.Lyrics is null)
                 return NotFound($"No data found for '{artist} - {track}'.");
+
+            return Ok(result); 
+        }
+
+        [HttpGet("search")]
+        [ProducesResponseType(typeof(SongPage), StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        [ProducesResponseType(StatusCodes.Status404NotFound)]
+        public async Task<ActionResult<SongPage>> SearchSongs([FromQuery] SongSearchRequest request, CancellationToken ct)
+        {
+            if (string.IsNullOrWhiteSpace(request.Query))
+                return BadRequest("Query parameter is required!");
+
+            var result = await _aggregatorService.SearchAsync(request, ct);
 
             return Ok(result); 
         }

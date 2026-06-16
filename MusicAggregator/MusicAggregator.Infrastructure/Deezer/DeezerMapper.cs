@@ -9,6 +9,7 @@ namespace MusicAggregator.Infrastructure.Deezer
         {
             Title = t.Title,
             DurationSeconds = t.Duration,
+            Rank = t.Rank,
             PreviewUrl = t.Preview,
             AlbumTitle = t.Album.Title,
             CoverUrl = t.Album.CoverXl,

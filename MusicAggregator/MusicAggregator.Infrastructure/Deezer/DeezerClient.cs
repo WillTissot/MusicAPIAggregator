@@ -18,7 +18,7 @@ namespace MusicAggregator.Infrastructure.Deezer
             _logger = logger;
         }
 
-        public async Task<TrackInfo?> SearchTrackAsync(string artist, string track, CancellationToken ct)
+        public async Task<TrackInfo?> GetTrackAsync(string artist, string track, CancellationToken ct)
         {
             string query = $"artist:\"{artist}\" track:\"{track}\"";
             string url = $"search?q={Uri.EscapeDataString(query)}";
@@ -35,6 +35,18 @@ namespace MusicAggregator.Infrastructure.Deezer
             }
 
             return bestMatchedTrack.ToTrackInfo();
+        }
+
+        public async Task<IReadOnlyList<TrackInfo>?> SearchTracksAsync(string query, CancellationToken ct)
+        {
+            var url = $"search?q={Uri.EscapeDataString(query)}&limit=25";
+
+            var response = await _client.GetFromJsonAsync<DeezerSearchResponse>(url, ct);
+
+            var tracks = response?.Data ?? [];
+            _logger.LogDebug("Deezer search '{Query}' returned {Count} tracks", query, tracks.Count);
+
+            return tracks.Select(t => t.ToTrackInfo()).ToArray();
         }
     }
 }

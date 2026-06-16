@@ -3,6 +3,7 @@ using MusicAggregator.Application.Abstractions;
 using MusicAggregator.Application.Models;
 using MusicAggregator.Infrastructure.MusicBrainz.Models;
 using System.Net.Http.Json;
+using static System.Net.WebRequestMethods;
 
 namespace MusicAggregator.Infrastructure.MusicBrainz
 {
@@ -32,6 +33,18 @@ namespace MusicAggregator.Infrastructure.MusicBrainz
             }
 
             return best.ToArtistInfo();
+        }
+
+        public async Task<IReadOnlyList<ArtistInfo>?> SearchArtistsAsync(string query, CancellationToken ct)
+        {
+            var url = $"artist?query={Uri.EscapeDataString(query)}&fmt=json";
+
+            var response = await _client.GetFromJsonAsync<BrainzArtistResponse>(url, ct);
+
+            var artists = response?.Artists ?? [];
+            _logger.LogDebug("MusicBrainz search '{Query}' returned {Count} artists", query, artists.Count);
+
+            return artists.Select(a => a.ToArtistInfo()).ToArray();
         }
     }
 }

@@ -4,6 +4,7 @@ namespace MusicAggregator.Application.Abstractions
 {
     public interface ITrackProvider
     {
-        Task<TrackInfo?> SearchTrackAsync(string artist, string track, CancellationToken ct);
+        Task<TrackInfo?> GetTrackAsync(string artist, string track, CancellationToken ct);
+        Task<IReadOnlyList<TrackInfo>?> SearchTracksAsync(string query, CancellationToken ct);
     }
 }

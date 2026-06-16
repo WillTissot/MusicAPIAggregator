@@ -23,7 +23,7 @@ namespace MusicAggregator.Application.Songs
         public async Task<SongPage> GetSongFullInfoAsync(string track, string artist, CancellationToken ct)
         {
 
-            var trackTask = SafeCallAsync(() => _trackProvider.SearchTrackAsync(artist, track, ct), "Track");
+            var trackTask = SafeCallAsync(() => _trackProvider.GetTrackAsync(artist, track, ct), "Track");
             var artistTask = SafeCallAsync(() => _artistProvider.GetArtistAsync(artist, ct), "Artist");
             var lyricsTask = SafeCallAsync(() => _lyricsProvider.GetLyricsInfoAsync(artist, track, ct), "Lyrics");
 
@@ -51,6 +51,50 @@ namespace MusicAggregator.Application.Songs
                     Track = trackResult.Value is not null,
                     Artist = artistResult.Value is not null,
                     Lyrics = lyricsResult.Value is not null,
+                    Warnings = warnings,
+                },
+            };
+        }
+
+        public async Task<SearchResult> SearchAsync(SongSearchRequest request, CancellationToken ct)
+        {
+            var tracksTask = SafeCallAsync(() => _trackProvider.SearchTracksAsync(request.Query, ct), "Tracks");
+            var artistsTask = SafeCallAsync(() => _artistProvider.SearchArtistsAsync(request.Query, ct), "Artists");
+
+            await Task.WhenAll(tracksTask, artistsTask);
+
+            var tracksResult = tracksTask.Result;
+            var artistsResult = artistsTask.Result;
+
+            IEnumerable<TrackInfo> tracks = tracksResult.Value ?? [];
+            if (request.TrackMinDuration is not null)
+                tracks = tracks.Where(t => t.DurationSeconds >= request.TrackMinDuration);
+
+            IEnumerable<ArtistInfo> artists = artistsResult.Value ?? [];
+            if (!string.IsNullOrWhiteSpace(request.Country))
+                artists = artists.Where(a =>
+                    string.Equals(a.Country, request.Country, StringComparison.OrdinalIgnoreCase));
+
+            if (request.SortByDuration)
+            {
+                tracks = tracks.OrderByDescending(t => t.DurationSeconds);
+            }
+
+            var warnings = new[] { tracksResult.Warning, artistsResult.Warning }
+                .Where(w => w is not null)
+                .Select(w => w!)
+                .ToArray();
+
+            return new SearchResult
+            {
+                Query = request.Query,
+                Tracks = tracks.ToList(),     
+                Artists = artists.ToList(),
+                Sources = new SourceStatus
+                {
+                    Track = tracksResult.Value is not null,
+                    Artist = artistsResult.Value is not null,
+                    Lyrics = false,           
                     Warnings = warnings,
                 },
             };

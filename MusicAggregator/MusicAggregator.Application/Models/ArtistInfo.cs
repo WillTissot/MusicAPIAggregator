@@ -7,6 +7,7 @@ namespace MusicAggregator.Application.Models
         public string? Country { get; init; } 
         public string? Type { get; init; }          
         public string? FormedYear { get; init; }     
-        public IReadOnlyList<string> Tags { get; init; } = [];   
+        public int Score { get; init; }
+        public IReadOnlyList<string> Tags { get; init; } = [];
     }
 }

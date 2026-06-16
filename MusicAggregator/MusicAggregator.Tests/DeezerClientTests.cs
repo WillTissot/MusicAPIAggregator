@@ -21,7 +21,7 @@ namespace MusicAggregator.Tests
             var json = await File.ReadAllTextAsync("TestData/deezer-search-creep.json");
             var sut = CreateSut(new StubHttpMessageHandler(json));
 
-            var result = await sut.SearchTrackAsync("Radiohead", "Creep", CancellationToken.None);
+            var result = await sut.GetTrackAsync("Radiohead", "Creep", CancellationToken.None);
 
             result.Should().NotBeNull();
             result!.Title.Should().Be("Creep");
@@ -46,7 +46,7 @@ namespace MusicAggregator.Tests
             """;
             var sut = CreateSut(new StubHttpMessageHandler(json));
 
-            var result = await sut.SearchTrackAsync("Radiohead", "Creep", CancellationToken.None);
+            var result = await sut.GetTrackAsync("Radiohead", "Creep", CancellationToken.None);
 
             result!.AlbumTitle.Should().Be("Pablo Honey");   // the rank 999 one
         }
@@ -57,7 +57,7 @@ namespace MusicAggregator.Tests
         {
             var sut = CreateSut(new StubHttpMessageHandler("""{ "data": [], "total": 0 }"""));
 
-            var result = await sut.SearchTrackAsync("zzz", "zzz", CancellationToken.None);
+            var result = await sut.GetTrackAsync("zzz", "zzz", CancellationToken.None);
 
             result.Should().BeNull();
         }
@@ -69,7 +69,7 @@ namespace MusicAggregator.Tests
             var handler = new StubHttpMessageHandler("""{ "data": [], "total": 0 }""");
             var sut = CreateSut(handler);
 
-            await sut.SearchTrackAsync("Radiohead", "Creep", CancellationToken.None);
+            await sut.GetTrackAsync("Radiohead", "Creep", CancellationToken.None);
 
             handler.LastRequest!.RequestUri!.ToString()
                 .Should().Contain("search?q=")
@@ -83,7 +83,7 @@ namespace MusicAggregator.Tests
         {
             var sut = CreateSut(new StubHttpMessageHandler("error", HttpStatusCode.InternalServerError));
 
-            var act = () => sut.SearchTrackAsync("Radiohead", "Creep", CancellationToken.None);
+            var act = () => sut.GetTrackAsync("Radiohead", "Creep", CancellationToken.None);
 
             await act.Should().ThrowAsync<HttpRequestException>();
         }

@@ -10,5 +10,6 @@ namespace MusicAggregator.Application.Songs
     public interface IMusicAggregatorService
     {
         Task<SongPage> GetSongFullInfoAsync(string track, string artist, CancellationToken ct);
+        Task<SearchResult> SearchAsync(SongSearchRequest request, CancellationToken ct);
     }
 }

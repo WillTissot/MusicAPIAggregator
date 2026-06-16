@@ -12,6 +12,7 @@ namespace MusicAggregator.Infrastructure.MusicBrainz
             Country = a.Country,
             Type = a.Type,
             FormedYear = a.LifeSpan?.Begin,
+            Score = a.Score,
             Tags = (a.Tags ?? [])
                 .Where(t => t.Count > 0)  //tags have something like most voted. We should filter out unpopular tags, otherwise we can get a lot of irrelevant tags with 0 votes
                 .OrderByDescending(t => t.Count)      // we should order the tags by most voted.
