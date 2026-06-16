@@ -5,6 +5,7 @@ using MusicAggregator.Application.Abstractions;
 using MusicAggregator.Infrastructure.Deezer;
 using MusicAggregator.Infrastructure.LRCLIB;
 using MusicAggregator.Infrastructure.MusicBrainz;
+using MusicAggregator.Infrastructure.Statistics;
 
 namespace MusicAggregator.Infrastructure
 {
@@ -13,6 +14,8 @@ namespace MusicAggregator.Infrastructure
         public static IServiceCollection AddInfrastructure(this IServiceCollection services, IConfiguration config)
         {
             services.AddHybridCache();
+            services.AddSingleton<IApiStatsStore, ApiStatsStore>();  
+            services.AddTransient<ApiStatsHandler>();          
 
             services.AddOptions<DeezerOptions>()
                 .Bind(config.GetSection(DeezerOptions.SectionName))
@@ -34,7 +37,7 @@ namespace MusicAggregator.Infrastructure
                 var o = sp.GetRequiredService<IOptions<DeezerOptions>>().Value;
                 http.BaseAddress = new Uri(o.BaseUrl);
                 http.Timeout = Timeout.InfiniteTimeSpan;
-            }).AddResilience();
+            }).AddResilience().AddHttpMessageHandler<ApiStatsHandler>();
 
             services.AddHttpClient<IArtistProvider, BrainzClient>((sp, http) =>
             {
@@ -42,14 +45,14 @@ namespace MusicAggregator.Infrastructure
                 http.BaseAddress = new Uri(o.BaseUrl);
                 http.DefaultRequestHeaders.UserAgent.ParseAdd(o.UserAgent);
                 http.Timeout = Timeout.InfiniteTimeSpan;
-            }).AddResilience();
+            }).AddResilience().AddHttpMessageHandler<ApiStatsHandler>();
 
             services.AddHttpClient<ILyricsProvider, LrclibClient>((sp, http) =>
             {
                 var o = sp.GetRequiredService<IOptions<LrclibOptions>>().Value;
                 http.BaseAddress = new Uri(o.BaseUrl);
                 http.Timeout = Timeout.InfiniteTimeSpan;
-            }).AddResilience(attemptTimeoutSeconds: 15);
+            }).AddResilience(attemptTimeoutSeconds: 15).AddHttpMessageHandler<ApiStatsHandler>();
 
             return services;
         }
