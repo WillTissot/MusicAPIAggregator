@@ -23,9 +23,9 @@ namespace MusicAggregator.Application.Songs
         public async Task<SongPage> GetSongFullInfoAsync(string track, string artist, CancellationToken ct)
         {
 
-            var trackTask = SafeCallAsync(() => _trackProvider.SearchTrackAsync(track, artist, ct), "Track");
+            var trackTask = SafeCallAsync(() => _trackProvider.SearchTrackAsync(artist, track, ct), "Track");
             var artistTask = SafeCallAsync(() => _artistProvider.GetArtistAsync(artist, ct), "Artist");
-            var lyricsTask = SafeCallAsync(() => _lyricsProvider.GetLyricsInfoAsync(track, artist, ct), "Lyrics");
+            var lyricsTask = SafeCallAsync(() => _lyricsProvider.GetLyricsInfoAsync(artist, track, ct), "Lyrics");
 
             await Task.WhenAll(trackTask, artistTask, lyricsTask);
 

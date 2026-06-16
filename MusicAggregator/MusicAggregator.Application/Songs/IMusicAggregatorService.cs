@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace MusicAggregator.Application.Songs
 {
-    internal interface IMusicAggregatorService
+    public interface IMusicAggregatorService
     {
         Task<SongPage> GetSongFullInfoAsync(string track, string artist, CancellationToken ct);
     }

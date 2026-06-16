@@ -38,6 +38,7 @@ namespace MusicAggregator.Infrastructure
             {
                 var o = sp.GetRequiredService<IOptions<BrainzOptions>>().Value;
                 http.BaseAddress = new Uri(o.BaseUrl);
+                http.DefaultRequestHeaders.UserAgent.ParseAdd(o.UserAgent);
                 http.Timeout = Timeout.InfiniteTimeSpan;
             }).AddResilience();
 
@@ -46,12 +47,12 @@ namespace MusicAggregator.Infrastructure
                 var o = sp.GetRequiredService<IOptions<LrclibOptions>>().Value;
                 http.BaseAddress = new Uri(o.BaseUrl);
                 http.Timeout = Timeout.InfiniteTimeSpan;
-            }).AddResilience();
+            }).AddResilience(attemptTimeoutSeconds: 15);
 
             return services;
         }
 
-        private static IHttpClientBuilder AddResilience(this IHttpClientBuilder builder)
+        private static IHttpClientBuilder AddResilience(this IHttpClientBuilder builder , int attemptTimeoutSeconds = 5, int maxRetries = 3)
         {
             builder.AddStandardResilienceHandler(r => {
                 r.Retry.MaxRetryAttempts = 3;
@@ -59,9 +60,9 @@ namespace MusicAggregator.Infrastructure
                 r.Retry.UseJitter = true;
                 r.Retry.Delay = TimeSpan.FromSeconds(1);
 
-                r.AttemptTimeout.Timeout = TimeSpan.FromSeconds(5);
+                r.AttemptTimeout.Timeout = TimeSpan.FromSeconds(attemptTimeoutSeconds);
 
-                r.TotalRequestTimeout.Timeout = TimeSpan.FromSeconds(20);
+                r.TotalRequestTimeout.Timeout = TimeSpan.FromSeconds(attemptTimeoutSeconds * (maxRetries + 1) + 5);
             });
 
             return builder;
