@@ -1,6 +1,9 @@
 ﻿using Microsoft.Extensions.Logging;
 using MusicAggregator.Application.Abstractions;
 using MusicAggregator.Application.Models;
+using MusicAggregator.Infrastructure.Deezer.Models;
+using System.Net.Http.Json;
+using static System.Net.WebRequestMethods;
 
 namespace MusicAggregator.Infrastructure.Deezer
 {
@@ -15,9 +18,23 @@ namespace MusicAggregator.Infrastructure.Deezer
             _logger = logger;
         }
 
-        public Task<TrackInfo?> SearchTrackAsync(string artist, string track, CancellationToken ct)
+        public async Task<TrackInfo?> SearchTrackAsync(string artist, string track, CancellationToken ct)
         {
-            throw new NotImplementedException();
+            string query = $"artist:\"{artist}\" track:\"{track}\"";
+            string url = $"search?q={Uri.EscapeDataString(query)}";
+
+            DeezerSearchResponse? response = await _client.GetFromJsonAsync<DeezerSearchResponse>(url, ct);
+
+            DeezerTrack? bestMatchedTrack = response?.Data.OrderByDescending(d => d.Rank).FirstOrDefault();
+
+            if (bestMatchedTrack is null)
+            {
+                _logger.LogWarning("Deezer returned no track for {Artist} - {Track}", artist, track);
+
+                return null;
+            }
+
+            return bestMatchedTrack.ToTrackInfo();
         }
     }
 }
