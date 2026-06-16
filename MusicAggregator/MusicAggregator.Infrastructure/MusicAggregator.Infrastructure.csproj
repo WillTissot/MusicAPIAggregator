@@ -8,7 +8,6 @@
 
   <ItemGroup>
     <Folder Include="LRCLIB\Models\" />
-    <Folder Include="MusicBrainz\Models\" />
   </ItemGroup>
 
   <ItemGroup>
