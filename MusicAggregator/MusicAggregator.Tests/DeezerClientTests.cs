@@ -11,7 +11,7 @@ namespace MusicAggregator.Tests
         private static DeezerClient CreateSut(StubHttpMessageHandler handler)
         {
             var http = new HttpClient(handler) { BaseAddress = new Uri("https://api.deezer.com/") };
-            return new DeezerClient(http, NullLogger<DeezerClient>.Instance);
+            return new DeezerClient(http, TestCache.Create(), NullLogger<DeezerClient>.Instance);
         }
 
         // 1 — maps fields correctly from real JSON

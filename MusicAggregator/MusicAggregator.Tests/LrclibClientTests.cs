@@ -11,7 +11,7 @@ namespace MusicAggregator.Tests
         private static LrclibClient CreateSut(StubHttpMessageHandler handler)
         {
             var http = new HttpClient(handler) { BaseAddress = new Uri("https://lrclib.net/") };
-            return new LrclibClient(http, NullLogger<LrclibClient>.Instance);
+            return new LrclibClient(http, TestCache.Create(), NullLogger<LrclibClient>.Instance);
         }
 
         // 1 — maps lyrics from the real response

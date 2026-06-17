@@ -11,7 +11,7 @@ namespace MusicAggregator.Tests
         private static BrainzClient CreateSut(StubHttpMessageHandler handler)
         {
             var http = new HttpClient(handler) { BaseAddress = new Uri("https://musicbrainz.org/ws/2/") };
-            return new BrainzClient(http, NullLogger<BrainzClient>.Instance);
+            return new BrainzClient(http, TestCache.Create(), NullLogger<BrainzClient>.Instance);
         }
 
         // 1 — maps the core fields from the real response
