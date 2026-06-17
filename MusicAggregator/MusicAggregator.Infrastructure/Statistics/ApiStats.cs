@@ -18,8 +18,8 @@ namespace MusicAggregator.Infrastructure.Statistics
             Interlocked.Increment(ref _count);
             Interlocked.Add(ref _totalMs, elapsedMs);
 
-            if (elapsedMs < 5) Interlocked.Increment(ref _fast);
-            else if (elapsedMs <= 12) Interlocked.Increment(ref _average);
+            if (elapsedMs < 100) Interlocked.Increment(ref _fast);
+            else if (elapsedMs <= 150) Interlocked.Increment(ref _average);
             else Interlocked.Increment(ref _slow);
         }
 
