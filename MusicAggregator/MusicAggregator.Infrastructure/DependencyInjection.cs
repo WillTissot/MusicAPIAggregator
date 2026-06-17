@@ -18,6 +18,7 @@ namespace MusicAggregator.Infrastructure
             services.AddHybridCache();
             services.AddSingleton<IApiStatsStore, ApiStatsStore>();  
             services.AddSingleton<ITokenService, TokenService>();
+            services.AddHostedService<PerformanceMonitor>();
             services.AddTransient<ApiStatsHandler>();          
 
             services.AddOptions<DeezerOptions>()
