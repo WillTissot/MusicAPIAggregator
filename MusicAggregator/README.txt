@@ -202,3 +202,7 @@ Integration tests (WebApplicationFactory):
   - Login with bad credentials -> 401.
   - Login, then use token -> not 401 (full round trip).
 
+#GIT
+
+Check branches to see the progress.
+
