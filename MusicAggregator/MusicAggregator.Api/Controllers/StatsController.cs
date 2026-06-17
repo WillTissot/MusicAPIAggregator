@@ -1,9 +1,11 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using MusicAggregator.Application.Abstractions;
 using static MusicAggregator.Application.Abstractions.IApiStatsStore;
 
 namespace MusicAggregator.Api.Controllers
 {
+    [Authorize]
     [ApiController]
     [Route("api/v1/[controller]")]
     public class StatsController : ControllerBase

@@ -2,6 +2,8 @@
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Options;
 using MusicAggregator.Application.Abstractions;
+using MusicAggregator.Application.Auth;
+using MusicAggregator.Infrastructure.Auth;
 using MusicAggregator.Infrastructure.Deezer;
 using MusicAggregator.Infrastructure.LRCLIB;
 using MusicAggregator.Infrastructure.MusicBrainz;
@@ -15,6 +17,7 @@ namespace MusicAggregator.Infrastructure
         {
             services.AddHybridCache();
             services.AddSingleton<IApiStatsStore, ApiStatsStore>();  
+            services.AddSingleton<ITokenService, TokenService>();
             services.AddTransient<ApiStatsHandler>();          
 
             services.AddOptions<DeezerOptions>()
